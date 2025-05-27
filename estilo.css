@@ -1,0 +1,461 @@
+/* === Variáveis de Cores === */
+:root {
+    --rosa-principal: #ff2d75;
+    --rosa-claro: #ff9bb8;
+    --rosa-escuro: #d6004e;
+    --dourado: #ffd700;
+    --branco: #ffffff;
+    --preto: #1a1a1a;
+    --cinza-claro: #f5f5f5;
+    --sombra: 0 10px 30px rgba(214, 0, 78, 0.3);
+    --gradiente-rosa: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+}
+
+/* === Reset e Geral === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* === Fundo Partículas === */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #fff9fb, #ffeef5);
+}
+
+/* === Preloader === */
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--gradiente-rosa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+}
+
+.hearts {
+    display: flex;
+    gap: 20px;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background: var(--branco);
+    transform: rotate(45deg);
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.heart::before, .heart::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: var(--branco);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before { top: -15px; left: 0; }
+.heart::after { left: -15px; top: 0; }
+
+.preloader p {
+    color: var(--branco);
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1) rotate(45deg); }
+    50% { transform: scale(1.2) rotate(45deg); }
+}
+
+/* === Navegação === */
+.glass-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    z-index: 999;
+    padding: 12px 24px;
+}
+
+.glass-nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.glass-nav a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.glass-nav a:hover {
+    color: var(--rosa-principal);
+}
+
+/* === Hero === */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--rosa-escuro);
+}
+
+.nome-amor {
+    color: var(--rosa-principal);
+    font-family: 'Dancing Script', cursive;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.btn-scroll {
+    margin-top: 30px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--rosa-principal);
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* === Carta === */
+.love-letter {
+    padding: 100px 20px;
+    background: var(--branco);
+    text-align: center;
+}
+
+.letter-content {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.letter-content h2 {
+    color: var(--rosa-escuro);
+    margin-bottom: 20px;
+}
+
+.signature {
+    margin-top: 30px;
+}
+
+.sign {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--rosa-principal);
+}
+
+/* === Motivos === */
+.reasons {
+    padding: 80px 20px;
+    background: var(--cinza-claro);
+    text-align: center;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.reason-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+}
+
+.reason-icon i {
+    font-size: 2rem;
+    color: var(--rosa-principal);
+}
+
+.reason-card h3 {
+    margin-top: 10px;
+    color: var(--rosa-escuro);
+}
+
+/* === Jogo da Memória === */
+.gallery {
+    padding: 80px 20px;
+    background: var(--cinza-claro);
+    text-align: center;
+}
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+@media (max-width: 600px) {
+    .memory-game {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.memory-card {
+    background: transparent;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card .front-face,
+.memory-card .back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+}
+
+.memory-card .front-face {
+    background: var(--gradiente-rosa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.memory-card .back-face {
+    transform: rotateY(180deg);
+}
+
+
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .memory-game {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+
+/* === Surpresa === */
+.surprise {
+    padding: 80px 20px;
+    background: var(--cinza-claro);
+    text-align: center;
+}
+
+.btn-romantico {
+    background: var(--gradiente-rosa);
+    border: none;
+    padding: 15px 30px;
+    color: var(--branco);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-romantico:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(214, 0, 78, 0.4);
+}
+
+.surprise-content {
+    margin-top: 30px;
+    display: none;
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--sombra);
+}
+
+.surprise-content.show {
+    display: block;
+}
+
+/* === Footer === */
+.footer {
+    background: var(--rosa-principal);
+    color: var(--branco);
+    padding: 20px;
+    text-align: center;
+}
+
+/* === Responsivo === */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .glass-nav ul {
+        gap: 14px;
+    }
+}
+ /* === Floating Buttons === */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.floating-buttons button {
+    background: var(--gradiente-rosa);
+    border: none;
+    color: var(--branco);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.floating-buttons button:hover {
+    transform: scale(1.1);
+}
+
+/* === Modo Noturno Completo === */
+body.dark-mode {
+    background: #0d0d0d;
+    color: var(--branco);
+}
+
+body.dark-mode #particles-js {
+    background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+}
+
+body.dark-mode .glass-nav {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .hero {
+    background: none;
+}
+
+body.dark-mode .hero-content h1 {
+    color: var(--rosa-claro);
+}
+
+body.dark-mode .subtitle {
+    color: var(--branco);
+}
+
+body.dark-mode .btn-scroll {
+    color: var(--rosa-claro);
+}
+
+body.dark-mode .letter-content,
+body.dark-mode .reason-card,
+body.dark-mode .timeline-item,
+body.dark-mode .surprise-content {
+    background: rgba(30, 30, 30, 0.9);
+    color: var(--branco);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .reasons,
+body.dark-mode .gallery,
+body.dark-mode .surprise {
+    background: #121212;
+}
+
+body.dark-mode .footer {
+    background: var(--rosa-escuro);
+    color: var(--branco);
+}
+
+body.dark-mode .btn-romantico {
+    background: var(--gradiente-rosa);
+}
+
+body.dark-mode .floating-buttons button {
+    background: var(--rosa-escuro);
+}
+
+body.dark-mode .timeline-date {
+    background: var(--rosa-claro);
+    color: var(--preto);
+}

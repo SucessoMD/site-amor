@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma declaração de amor inesquecível para quem ilumina minha vida.">
+    <meta name="author" content="Seu Nome">
+    <title>Para o Amor da Minha Vida</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <body class="dark-mode">
+
+    <!-- Botões Flutuantes -->
+<div class="floating-buttons">
+    <button id="toggle-music" aria-label="Tocar/Pausar Música"><i class="fas fa-music"></i></button>
+    <button id="toggle-theme" aria-label="Alternar Tema"><i class="fas fa-moon"></i></button>
+</div>
+
+<!-- Áudio -->
+<audio id="background-music" loop>
+    <source src="trilha.mp3" type="audio/mp3">
+</audio>
+
+
+    <!-- Fundo Animado -->
+    <div id="particles-js"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <p>Carregando nosso amor...</p>
+    </div>
+
+    <!-- Navegação -->
+    <header>
+        <nav class="glass-nav">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#motivos">Motivos</a></li>
+                <li><a href="#galeria">Memórias</a></li>
+                <li><a href="#surpresa">Surpresa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Para <span class="nome-amor">Melyssa</span></h1>
+                <p class="subtitle">A mulher que ilumina meu universo</p>
+                <button class="btn-scroll" aria-label="Rolar para baixo">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Carta -->
+        <section id="carta" class="love-letter">
+            <article class="letter-content" data-aos="zoom-in">
+                <h2><i class="fas fa-heart"></i> Minha Querida Melyssa</h2>
+                <p>Quando você entrou na minha vida, tudo ganhou cor, sentido e propósito. Cada momento ao seu lado é uma bênção que valorizo profundamente.</p>
+                <p>Seu sorriso ilumina meus dias, sua voz acalma meu coração, e seu amor me faz acreditar que a felicidade é real.</p>
+                <p>Prometo te amar, cuidar e celebrar cada instante da nossa história.</p>
+                <div class="signature">
+                    <p>Eternamente seu,</p>
+                    <p class="sign">Seu Amor</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Motivos -->
+        <section id="motivos" class="reasons">
+            <h2 class="section-title" data-aos="fade-up">Razões do Meu Amor</h2>
+            <div class="reasons-container" id="reasons-grid"></div>
+        </section>
+
+        <!--Jogo da Memoria-->
+       <section id="galeria" class="gallery">
+            <h2 class="section-title" data-aos="fade-up">Jogo da Memória</h2>
+         <div class="memory-game" id="memory-game"></div>
+         </section>
+
+
+        <!-- Surpresa -->
+        <section id="surpresa" class="surprise">
+    <button id="surpresa-btn" class="btn-romantico">
+        <span>Clique para nossa surpresa</span>
+        <i class="fas fa-heart"></i>
+    </button>
+    <div id="surpresa-content" class="surprise-content">
+        <h3>Surpresa Especial!</h3>
+        <video controls poster="capa-video.jpg">
+            <source src="nosso-video.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Feito com todo amor do mundo ❤️</p>
+    </footer>
+
+    <!-- Scripts -->
+  <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
